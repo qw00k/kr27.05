@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double x, e;
+    cin >> x;
+    cin >> e;
+
+    double a = 1.0;
+    double b = 1.0;
+    int n = 1;
+    
+    while (true) {
+        b *= (-1) * x * x / ((2 * n - 1) * (2 * n));
+        if (abs(b) < e) break;
+        a += b;
+        n++;
+    }
+
+    cout << a << endl;
+    return 0;
+}
